@@ -1,0 +1,30 @@
+{
+  "name": "ag-grid-repro",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./main/main.js",
+  "scripts": {
+    "dev": "concurrently \"yarn dev:vite\" \" yarn dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "yarn build:electron && electron .",
+    "build:vite": "tsc && vite build",
+    "build:electron": "tsc -p electron",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "17",
+    "react-dom": "17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "concurrently": "^7.6.0",
+    "electron": "20.3.0",
+    "electron-link": "^0.6.0",
+    "electron-mksnapshot": "20",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3",
+    "vite-plugin-externals": "^0.5.1"
+  }
+}
